@@ -13,15 +13,15 @@ export class SomeClass {
   }
 }
 
-export enum DataTypeOption {
-  Money = 'Money',
-  Percent = 'Percent',
-}
-
 export type Data = {
   type: DataTypeOption;
   value: DataValue;
 };
+
+export enum DataTypeOption {
+  Money = 'Money',
+  Percent = 'Percent',
+}
 
 export type DataValue = Money | Percent;
 
@@ -34,16 +34,39 @@ export type Percent = {
   percent: number;
 };
 
+const isMoney = (value: DataValue): value is Money => {
+  return 'currency' in value;
+};
+
+const isPercent = (value: DataValue): value is Percent => {
+  return 'percent' in value;
+};
+
+const throwInvalidDataError = (data: Data): never => {
+  throw new Error(`Invalid data: ${JSON.stringify(data)}`);
+};
+
 export const getDataAmount = (data: Data): number => {
   switch (data.type) {
     case DataTypeOption.Money:
-      return (data.value as Money).amount;
+      if (isMoney(data.value)) {
+        return data.value.amount;
+      } else {
+        throwInvalidDataError(data);
+      }
+      break;
+
+    case DataTypeOption.Percent:
+      if (isPercent(data.value)) {
+        return data.value.percent;
+      } else {
+        throwInvalidDataError(data);
+      }
+      break;
 
     default: {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const unhandled: never = (() => {
-        throw new Error(`unknown type: ${data.type}`);
-      })();
+      const unhandledType: never = data.type;
+      throw new Error(`unknown type: ${unhandledType}`);
     }
   }
 };
