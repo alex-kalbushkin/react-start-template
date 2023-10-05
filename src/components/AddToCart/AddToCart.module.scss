@@ -1,0 +1,15 @@
+.addToCartContainer {
+  background-color: #fff;
+  box-shadow: 0 0 1px 0 #091e424f, 0 3px 8px 0 #091e4229;
+  padding: 10px;
+  margin: 5px;
+  width: 460px;
+  border: none;
+  border-radius: 4px;
+
+  .productDataContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

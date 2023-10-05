@@ -1,0 +1,83 @@
+.entityRow {
+  width: 100%;
+  max-width: 780px;
+  height: 76px;
+  border: 0.5px solid #94a3b8;
+  display: flex;
+  align-items: center;
+  margin: 5px;
+
+  &:nth-child(odd) {
+    background-color: #fbfcfe;
+  }
+
+  &:nth-child(even) {
+    background-color: #fff;
+  }
+
+  .cellDataContainer {
+    padding: 5px 10px;
+    flex-grow: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &:not(:last-child) {
+      border-right: 0.5px solid #94a3b8;
+    }
+
+    &.cellDataImage {
+      height: 72px;
+      width: 72px;
+      max-width: 72px;
+    }
+
+    &.cellDataButton {
+      width: 60px;
+      max-width: 60px;
+    }
+
+    &.cellDataWide {
+      flex-grow: 4;
+    }
+
+    &.cellDataPrice {
+      flex-grow: 1;
+    }
+
+    .cellImage {
+      width: 62px;
+      height: 62px;
+    }
+
+    .cellTextDataContainer {
+      display: flex;
+      flex-direction: column;
+      max-width: 220px;
+
+      .dataItemTitle {
+        height: 24px;
+        line-height: 24px;
+        font-size: 16px;
+        color: #1e293b;
+      }
+
+      .dataItemValue {
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px;
+        color: #475569;
+      }
+    }
+
+    .cellButtonContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 30px;
+      width: 60px;
+    }
+  }
+}

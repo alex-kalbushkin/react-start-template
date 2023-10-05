@@ -1,0 +1,60 @@
+.tableDataContainer {
+  width: 100%;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  .tableRow {
+    width: 100%;
+    height: 86px;
+    border-top: 0.5px solid #94a3b8;
+    display: flex;
+    gap: 0px 5px;
+
+    &:nth-child(odd) {
+      background-color: #94a3b8;
+    }
+
+    &:nth-child(even) {
+      background-color: #f8fafc;
+    }
+    .tableCellData {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      .image {
+        width: 62px;
+        height: 62px;
+      }
+
+      .cellTextDataContainer {
+        display: flex;
+        flex-direction: column;
+        max-width: 220px;
+
+        .dataItemTitle {
+          height: 24px;
+          line-height: 24px;
+          font-size: 16px;
+          color: #1e293b;
+        }
+
+        .dataItemValue {
+          height: 20px;
+          line-height: 20px;
+          font-size: 14px;
+          color: #475569;
+        }
+      }
+
+      .cellButtonContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+}
