@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import React, { FC, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import styles from './ModalWindow.module.scss';
 
 interface IModalWindowProps {
@@ -9,7 +9,7 @@ interface IModalWindowProps {
   headerText?: string;
 }
 
-export const ModalWindow: FC<IModalWindowProps> = ({ visible, children, headerText = '' }) => {
+export const ModalWindow = ({ visible, children, headerText = '' }: IModalWindowProps) => {
   if (!visible) {
     return null;
   }

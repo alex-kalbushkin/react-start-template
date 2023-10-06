@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { Header } from '../Header';
 import styles from './Layout.module.scss';
 
@@ -6,7 +6,7 @@ interface ILayoutProps {
   children?: React.ReactNode;
 }
 
-export const Layout: FC<ILayoutProps> = ({ children }) => {
+export const Layout = ({ children }: ILayoutProps) => {
   return (
     <div className={styles.layoutContainer}>
       <Header />

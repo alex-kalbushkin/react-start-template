@@ -1,16 +1,21 @@
 import clsx from 'clsx';
-import React, { FC } from 'react';
+import React from 'react';
 import { Logo } from '../Logo';
 import styles from './Header.module.scss';
 
-interface IHeaderProps {
-  className?: string;
+export enum HeaderTheme {
+  Common = 'common',
+  Dark = 'dark',
 }
 
-export const Header: FC<IHeaderProps> = ({ className = '' }) => {
+interface IHeaderProps {
+  theme?: HeaderTheme;
+}
+
+export const Header = ({ theme = HeaderTheme.Common }: IHeaderProps) => {
   return (
-    <header className={clsx(styles.headerContainer, className)}>
-      <Logo />
+    <header className={clsx(styles.headerContainer, { [styles.dark]: theme === HeaderTheme.Dark })}>
+      <Logo theme={theme} />
       <nav className={styles.navigationContainer}>Future navigation bar</nav>
     </header>
   );

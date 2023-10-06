@@ -4,14 +4,15 @@ import { truncateText } from '../../utils';
 import { EntityRow, IRowCell } from '../EntityRow';
 import { IconButton } from '../IconButton';
 
-interface IProductSummaryProps {
+export interface IProductSummaryProps {
   description: string;
   imageUrl: string;
   price: number;
   title: string;
+  disabled?: boolean;
 }
 
-export const ProductSummary = ({ description, imageUrl, price, title }: IProductSummaryProps) => {
+export const ProductSummary = ({ description, imageUrl, price, title, disabled = true }: IProductSummaryProps) => {
   const mockRowCellsData: IRowCell[] = [
     {
       imageUrl,
@@ -30,7 +31,7 @@ export const ProductSummary = ({ description, imageUrl, price, title }: IProduct
       dataItemValue: truncateText(description, 13),
     },
     {
-      itemButton: <IconButton icon={faCartPlus} disabled handleClick={null} />,
+      itemButton: <IconButton icon={faCartPlus} disabled={disabled} handleClick={null} />,
     },
   ];
 

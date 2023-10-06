@@ -13,7 +13,7 @@ export const Counter = ({ counter }: ICounterProps) => {
     <div className={styles.counter}>
       <IconButton className={clsx(styles.counterButton, styles.decrease)} icon={faCircleMinus} handleClick={null} />
 
-      <input type="text" className={styles.counterInput} value={counter} readOnly />
+      <input type="number" className={styles.counterInput} value={counter} readOnly />
 
       <IconButton className={clsx(styles.counterButton, styles.increase)} icon={faCirclePlus} handleClick={null} />
     </div>

@@ -2,22 +2,20 @@ import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { EntityRow, IRowCell } from '../EntityRow';
 import { IconButton } from '../IconButton';
+import { IProductSummaryProps } from '../ProductSummary';
 
-interface IProductTotalDescriptionProps {
+interface IProductFullProps extends IProductSummaryProps {
   categoryName: string;
-  description: string;
-  imageUrl: string;
-  title: string;
-  price: number;
 }
 
-export const ProductTotalDescription = ({
+export const ProductFull = ({
   categoryName,
   description,
   imageUrl,
   title,
   price,
-}: IProductTotalDescriptionProps) => {
+  disabled = true,
+}: IProductFullProps) => {
   const mockRowCellsData: IRowCell[] = [
     {
       imageUrl,
@@ -40,7 +38,7 @@ export const ProductTotalDescription = ({
       dataItemValue: description,
     },
     {
-      itemButton: <IconButton icon={faCartPlus} disabled handleClick={null} />,
+      itemButton: <IconButton icon={faCartPlus} disabled={disabled} handleClick={null} />,
     },
   ];
 

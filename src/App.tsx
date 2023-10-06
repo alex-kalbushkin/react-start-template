@@ -7,7 +7,7 @@ import { OperationSummary } from './components/OperationSummary';
 import { AddToCart } from './components/AddToCart';
 import { ProductSummary } from './components/ProductSummary';
 import Chocolate from './assets/images/chocolate.png';
-import { ProductTotalDescription } from './components/ProductFull';
+import { ProductFull } from './components/ProductFull';
 import { CartProduct } from './components/CartProduct';
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
 
       <ProductSummary description="Best product ever made" imageUrl={Chocolate} price={100} title="Chocolate" />
 
-      <ProductTotalDescription
+      <ProductFull
         categoryName="Food"
         description="Best product ever made"
         imageUrl={Chocolate}

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { truncateText } from '../../utils';
 import { EntityRow, IRowCell } from '../EntityRow';
 
@@ -9,12 +9,7 @@ export interface IOperationSummaryProps {
   transactionAmount: number;
 }
 
-export const OperationSummary: FC<IOperationSummaryProps> = ({
-  transactionAmount,
-  categoryName,
-  title,
-  description,
-}) => {
+export const OperationSummary = ({ transactionAmount, categoryName, title, description }: IOperationSummaryProps) => {
   const mockRowCellsData: IRowCell[] = [
     {
       dataItemTitle: 'Price',
