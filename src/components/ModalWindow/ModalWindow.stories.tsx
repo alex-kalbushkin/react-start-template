@@ -9,7 +9,7 @@ const meta: Meta<typeof ModalWindow> = {
     layout: 'fullscreen',
   },
   argTypes: {
-    visible: {
+    isModalVisible: {
       type: 'boolean',
       description: 'Visibility of the component',
       control: { type: 'boolean' },
@@ -21,7 +21,7 @@ const meta: Meta<typeof ModalWindow> = {
     },
   },
   args: {
-    visible: false,
+    isModalVisible: false,
     headerText: '',
   },
 };
@@ -32,20 +32,20 @@ type Story = StoryObj<typeof ModalWindow>;
 
 export const ModalCommon: Story = {
   args: {
-    visible: true,
+    isModalVisible: true,
   },
 };
 
 export const ModalWithHeader: Story = {
   args: {
-    visible: true,
+    isModalVisible: true,
     headerText: 'Common Header Text',
   },
 };
 
 export const ModalWithChildren: Story = {
   args: {
-    visible: true,
+    isModalVisible: true,
     children: <div>ChildData</div>,
   },
 };

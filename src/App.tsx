@@ -1,19 +1,19 @@
 import React from 'react';
-import './App.css';
-import { ModalWindow } from './components/ModalWindow';
+import Chocolate from './assets/images/chocolate.png';
+import { AddToCart } from './components/AddToCart';
+import { CartProduct } from './components/CartProduct';
 import { Layout } from './components/Layout';
+import { ModalControl } from './components/ModalControl';
 import { OperationFull } from './components/OperationFull';
 import { OperationSummary } from './components/OperationSummary';
-import { AddToCart } from './components/AddToCart';
-import { ProductSummary } from './components/ProductSummary';
-import Chocolate from './assets/images/chocolate.png';
 import { ProductFull } from './components/ProductFull';
-import { CartProduct } from './components/CartProduct';
+import { ProductSummary } from './components/ProductSummary';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      {/* <ModalWindow visible>{'Test Data'}</ModalWindow> */}
+      <ModalControl />
       <Layout />
       <OperationFull
         categoryName="Jackets"
