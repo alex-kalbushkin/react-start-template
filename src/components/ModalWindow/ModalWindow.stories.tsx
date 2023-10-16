@@ -21,7 +21,6 @@ const meta: Meta<typeof ModalWindow> = {
     },
   },
   args: {
-    isModalVisible: false,
     headerText: '',
   },
 };

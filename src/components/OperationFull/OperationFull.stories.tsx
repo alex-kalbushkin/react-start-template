@@ -44,11 +44,6 @@ const meta: Meta<typeof OperationFull> = {
     },
   },
   args: {
-    categoryName: 'Common category',
-    description: 'Buy two Jackets for 200$',
-    title: 'Buy Jackets',
-    transactionAmount: 10,
-    transactionDate: new Date(),
     disabled: true,
   },
 };
@@ -61,5 +56,8 @@ export const OperationFullCommon: Story = {
   args: {
     title: 'Buy chocolate',
     description: 'Buy 1kg of chocolate',
+    categoryName: 'Common category',
+    transactionAmount: 10,
+    transactionDate: new Date(),
   },
 };

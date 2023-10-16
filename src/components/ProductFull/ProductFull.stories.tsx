@@ -43,10 +43,6 @@ const meta: Meta<typeof ProductFull> = {
     },
   },
   args: {
-    categoryName: 'Food',
-    description: 'Best product ever made',
-    title: 'Chocolate',
-    price: 100,
     disabled: true,
   },
 };
@@ -60,5 +56,7 @@ export const ProductFullCommon: Story = {
     title: 'Dark chocolate',
     price: 50,
     imageUrl: Chocolate,
+    categoryName: 'Food',
+    description: 'Best product ever made',
   },
 };

@@ -31,12 +31,7 @@ const meta: Meta<typeof OperationSummary> = {
       control: { type: 'number', min: 10, max: 100, step: 5 },
     },
   },
-  args: {
-    categoryName: 'Common category',
-    description: 'Buy two Jackets for 200$',
-    title: 'Buy Jackets',
-    transactionAmount: 10,
-  },
+  args: {},
 };
 
 export default meta;
@@ -47,5 +42,7 @@ export const OperationSummaryCommon: Story = {
   args: {
     title: 'Buy chocolate',
     description: 'Buy 1kg of chocolate',
+    categoryName: 'Common category',
+    transactionAmount: 10,
   },
 };

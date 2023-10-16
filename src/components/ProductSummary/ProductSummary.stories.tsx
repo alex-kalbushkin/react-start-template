@@ -37,9 +37,6 @@ const meta: Meta<typeof ProductSummary> = {
     },
   },
   args: {
-    description: 'Best product ever made',
-    title: 'Chocolate',
-    price: 100,
     disabled: true,
   },
 };
@@ -53,5 +50,6 @@ export const ProductSummaryCommon: Story = {
     title: 'Dark chocolate',
     price: 50,
     imageUrl: Chocolate,
+    description: 'Best product ever made',
   },
 };

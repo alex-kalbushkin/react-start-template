@@ -15,7 +15,9 @@ const meta: Meta<typeof Header> = {
       table: { defaultValue: { summary: HeaderTheme.Common } },
     },
   },
-  args: { theme: HeaderTheme.Common },
+  args: {
+    theme: HeaderTheme.Common,
+  },
 };
 
 export default meta;
