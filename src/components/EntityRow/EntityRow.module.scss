@@ -1,17 +1,20 @@
+@import '../../providers/ThemeProvider/mixins.scss';
+
 .entityRow {
   width: 100%;
   max-width: 780px;
   height: 76px;
-  border: 0.5px solid #94a3b8;
   display: flex;
   align-items: center;
 
+  @include themeCreator;
+
   &:nth-child(odd) {
-    background-color: #fbfcfe;
+    @include theme('background-color', 'bg-secondary');
   }
 
   &:nth-child(even) {
-    background-color: #fff;
+    @include theme('background-color', 'bg-primary');
   }
 
   .cellDataContainer {
@@ -24,13 +27,14 @@
     text-align: center;
 
     &:not(:last-child) {
-      border-right: 0.5px solid #94a3b8;
+      border-right: 1px solid rgb(181, 181, 181);
     }
 
     &.cellDataImage {
       height: 72px;
       width: 72px;
       max-width: 72px;
+      padding: 0 10px;
     }
 
     &.cellDataButton {
@@ -60,14 +64,14 @@
         height: 24px;
         line-height: 24px;
         font-size: 14px;
-        color: #1e293b;
+        @include theme('color', 'color-title');
       }
 
       .dataItemValue {
         height: 20px;
         line-height: 20px;
         font-size: 16px;
-        color: #475569;
+        @include theme('color', 'color-secondary');
       }
     }
 

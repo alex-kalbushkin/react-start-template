@@ -1,4 +1,5 @@
 @import '../../styles/common.styles.scss';
+@import '../../providers/ThemeProvider/mixins.scss';
 
 .headerContainer {
   display: flex;
@@ -8,20 +9,16 @@
   position: sticky;
   top: 0;
   left: 0;
+  margin-bottom: 10px;
   z-index: $headerZIndex;
-  background-color: #fff;
-  border: none;
-  border-radius: 0 0 4px 4px;
-  box-shadow: 0px 1px 0px #dce5ef, 0px 1px 4px rgba(9, 8, 61, 0.08);
-  margin-bottom: 5px;
 
-  &.dark {
-    background-color: rgba(44, 44, 44, 0.6);
-    color: #eeeeee;
-  }
+  @include themeCreator;
 
   .navigationContainer {
-    border-left: 1px solid rgb(123, 123, 123);
+    width: 100%;
+    border-left: 1px solid rgb(181, 181, 181);
     padding: 5px;
+    display: flex;
+    justify-content: flex-end;
   }
 }

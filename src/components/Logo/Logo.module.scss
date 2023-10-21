@@ -1,23 +1,25 @@
+@import '../../providers//ThemeProvider/mixins.scss';
+
 .logoContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 36px;
   width: 36px;
+  min-width: 36px;
   margin-right: 10px;
-  border-radius: 50%;
+  border-radius: 30px;
   border: 1px solid rgb(123, 123, 123);
   background-color: rgb(199, 199, 199);
   transition: all ease-in-out 300ms;
 
-  &.darkIcon {
-    background-color: rgb(109, 109, 109);
-  }
+  @include theme('color', 'color-icon');
 
   &:hover {
     border: 1px solid rgb(93, 93, 93);
     background-color: rgb(164, 164, 164);
-    color: rgb(110, 0, 0);
     cursor: pointer;
+
+    @include theme('color', 'color-red');
   }
 }

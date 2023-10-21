@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Header, HeaderTheme } from './Header';
+import { Header } from './Header';
 
 const meta: Meta<typeof Header> = {
   title: 'Header',
@@ -8,16 +8,8 @@ const meta: Meta<typeof Header> = {
   parameters: {
     layout: 'fullscreen',
   },
-  argTypes: {
-    theme: {
-      description: 'Header theme type',
-      control: { type: 'radio', options: [HeaderTheme.Common, HeaderTheme.Dark] },
-      table: { defaultValue: { summary: HeaderTheme.Common } },
-    },
-  },
-  args: {
-    theme: HeaderTheme.Common,
-  },
+  argTypes: {},
+  args: {},
 };
 
 export default meta;
@@ -25,5 +17,5 @@ export default meta;
 type Story = StoryObj<typeof Header>;
 
 export const HeaderCommon: Story = {
-  args: { theme: HeaderTheme.Common },
+  args: {},
 };

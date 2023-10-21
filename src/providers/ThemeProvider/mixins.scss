@@ -1,0 +1,17 @@
+@import '../../../src/providers/ThemeProvider/theme.scss';
+
+@mixin theme($property, $variable, $before: null, $after: null) {
+  @at-root body:global(.light) #{&} {
+    #{$property}: #{$before} #{map-get($light, $variable)} #{$after};
+  }
+  @at-root body:global(.dark) #{&} {
+    #{$property}: #{$before} #{map-get($dark, $variable)} #{$after};
+  }
+}
+
+@mixin themeCreator() {
+  @include theme('background-color', 'bg-primary');
+  @include theme('border-style', 'border-none');
+  @include theme('box-shadow', 'box-shadow-primary');
+  @include theme('color', 'color-primary');
+}
