@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Header } from '../Header';
 import styles from './Layout.module.scss';
 import Chocolate from '../../assets/images/chocolate.png';
@@ -9,15 +10,17 @@ interface ILayoutProps {
 }
 
 export const Layout = ({ children }: ILayoutProps) => {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.layoutContainer}>
       <Header />
       <ProductFull
-        title="Dark chocolate"
+        title={t('chocolate.name')}
         price={50}
         imageUrl={Chocolate}
-        categoryName="Food"
-        description="Best product ever made"
+        categoryName={t('category.food')}
+        description={t('chocolate.description')}
       />
 
       {children}

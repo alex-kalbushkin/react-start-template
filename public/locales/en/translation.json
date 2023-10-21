@@ -1,0 +1,15 @@
+{
+  "product": {
+    "price": "Price",
+    "categoryName": "Category name",
+    "name": "Name",
+    "description": "Description"
+  },
+  "category": {
+    "food": "Food"
+  },
+  "chocolate": {
+    "name": "Dark chocolate",
+    "description": "Best product ever made"
+  }
+}

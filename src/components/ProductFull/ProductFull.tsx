@@ -1,5 +1,6 @@
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { EntityRow, IRowCell } from '../EntityRow';
 import { IconButton } from '../IconButton';
 import { IProductSummaryProps } from '../ProductSummary';
@@ -16,25 +17,27 @@ export const ProductFull = ({
   price,
   disabled = true,
 }: IProductFullProps) => {
+  const { t } = useTranslation();
+
   const mockRowCellsData: IRowCell[] = [
     {
       imageUrl,
     },
     {
-      dataItemTitle: 'Price',
+      dataItemTitle: t('product.price'),
       dataItemValue: price.toString(),
       isPrice: true,
     },
     {
-      dataItemTitle: 'Category name',
+      dataItemTitle: t('product.categoryName'),
       dataItemValue: categoryName,
     },
     {
-      dataItemTitle: 'Name',
+      dataItemTitle: t('product.name'),
       dataItemValue: title,
     },
     {
-      dataItemTitle: 'Description',
+      dataItemTitle: t('product.description'),
       dataItemValue: description,
     },
     {

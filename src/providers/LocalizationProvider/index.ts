@@ -1,2 +1,2 @@
-export * from './ThemeProvider';
+export { default } from './settings';
 export * from './LocalizationProvider';
