@@ -1,0 +1,15 @@
+{
+  "product": {
+    "price": "Цена",
+    "categoryName": "Категория",
+    "name": "Название",
+    "description": "Описание"
+  },
+  "category": {
+    "food": "Еда"
+  },
+  "chocolate": {
+    "name": "Темный шоколад",
+    "description": "Лучший продукт"
+  }
+}
