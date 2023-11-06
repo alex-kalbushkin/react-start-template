@@ -11,7 +11,9 @@ i18n
   .use(initReactI18next) // pass the i18n instance to react-i18next
   .init({
     fallbackLng: LocaleLanguage.En,
-    debug: true,
+    supportedLngs: ['en', 'ru'],
+    nonExplicitSupportedLngs: true, // Allows "en-US"-"en-UK" to be supported when "en" is implicitly supported
+    debug: process.env.NODE_ENV === 'development',
     interpolation: {
       escapeValue: false,
     },

@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Layout } from './components/Layout';
 import './App.css';
-import { LocalizationProvider, ThemeProvider } from './providers';
+import { LocalizationCreator } from './localization';
+import './localization/settings';
+import { ThemeProvider } from './providers';
 
 function App() {
   return (
     <div className="App">
-      <LocalizationProvider>
+      <Suspense fallback="Loading...">
+        <LocalizationCreator />
         <ThemeProvider>
           <Layout />
         </ThemeProvider>
-      </LocalizationProvider>
+      </Suspense>
     </div>
   );
 }

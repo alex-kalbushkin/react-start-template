@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Header } from './Header';
-import { LocalizationProvider, ThemeProvider } from '../../providers';
+import { ThemeProvider } from '../../providers';
 
 const meta: Meta<typeof Header> = {
   title: 'Header',
@@ -20,10 +20,8 @@ type Story = StoryObj<typeof Header>;
 
 export const HeaderCommon: Story = {
   render: () => (
-    <LocalizationProvider>
-      <ThemeProvider>
-        <Header />
-      </ThemeProvider>
-    </LocalizationProvider>
+    <ThemeProvider>
+      <Header />
+    </ThemeProvider>
   ),
 };
