@@ -17,6 +17,10 @@ i18n
     interpolation: {
       escapeValue: false,
     },
+    backend: {
+      // additional config for gh-pages
+      loadPath: '/react-start-template/locales/{{lng}}/{{ns}}.json',
+    },
   });
 /* eslint-enable */
 
