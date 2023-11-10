@@ -8,7 +8,7 @@ export interface IRowCell {
   isWideCell?: boolean;
   isPrice?: boolean;
   itemButton?: React.ReactNode;
-  imageUrl?: string;
+  imageURL?: string;
 }
 
 export interface ITableRowProps {
@@ -19,19 +19,19 @@ export interface ITableRowProps {
 export const EntityRow = ({ rowCells, className }: ITableRowProps) => (
   <div className={clsx(className, styles.entityRow)}>
     {rowCells.map((rowCell, rowCellIndex) => {
-      const { dataItemTitle, dataItemValue, itemButton, imageUrl, isWideCell, isPrice } = rowCell;
+      const { dataItemTitle, dataItemValue, itemButton, imageURL, isWideCell, isPrice } = rowCell;
 
       return (
         <div
           key={rowCellIndex}
           className={clsx(styles.cellDataContainer, {
-            [styles.cellDataImage]: !!imageUrl,
+            [styles.cellDataImage]: !!imageURL,
             [styles.cellDataButton]: !!itemButton,
             [styles.cellDataWide]: isWideCell,
             [styles.cellDataPrice]: isPrice,
           })}
         >
-          {imageUrl && <img src={imageUrl} alt="image" className={styles.cellImage} />}
+          {imageURL && <img src={imageURL} alt="image" className={styles.cellImage} />}
 
           {dataItemTitle && dataItemValue && (
             <div className={styles.cellTextDataContainer}>

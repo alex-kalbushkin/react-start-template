@@ -1,5 +1,9 @@
+@import '../../providers/ThemeProvider/mixins.scss';
+
 .layoutContainer {
   width: 100%;
   background-color: #f3f4f6;
   position: relative;
+
+  @include theme('background-color', 'bg-layout');
 }

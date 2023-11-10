@@ -1,6 +1,7 @@
 $light: (
   bg-primary: #fff,
   bg-secondary: #fbfcfe,
+  bg-layout: #f3f4f6,
   color-primary: #000,
   color-secondary: #475569,
   color-title: #1e293b,
@@ -15,8 +16,9 @@ $light: (
 );
 
 $dark: (
-  bg-primary: rgba(44, 44, 44, 0.6),
-  bg-secondary: rgba(35, 35, 35, 0.6),
+  bg-primary: rgb(44, 44, 44),
+  bg-secondary: rgb(35, 35, 35),
+  bg-layout: rgb(88, 88, 88),
   color-primary: #eeeeee,
   color-secondary: #ddd9d9,
   color-title: #ffffff,

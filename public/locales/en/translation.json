@@ -6,10 +6,18 @@
     "description": "Description"
   },
   "category": {
-    "food": "Food"
+    "shoes": "Shoes"
   },
-  "chocolate": {
-    "name": "Dark chocolate",
-    "description": "Best product ever made"
+  "sneakers": {
+    "name": "Sneakers",
+    "description": "High quality shoes"
+  },
+  "dockShoes": {
+    "name": "Dock shoes",
+    "description": "Strong shoes"
+  },
+  "nike": {
+    "name": "Nike",
+    "description": "World famous"
   }
 }

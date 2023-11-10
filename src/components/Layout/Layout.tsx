@@ -1,27 +1,20 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { Header } from '../Header';
+import { ProductsList } from '../ProductsList';
+import { useLayoutService } from './services';
 import styles from './Layout.module.scss';
-import Chocolate from '../../assets/images/chocolate.png';
-import { ProductFull } from '../ProductFull';
 
 interface ILayoutProps {
   children?: React.ReactNode;
 }
 
 export const Layout = ({ children }: ILayoutProps) => {
-  const { t } = useTranslation();
+  const { productsList } = useLayoutService();
 
   return (
     <div className={styles.layoutContainer}>
       <Header />
-      <ProductFull
-        title={t('chocolate.name')}
-        price={50}
-        imageUrl={Chocolate}
-        categoryName={t('category.food')}
-        description={t('chocolate.description')}
-      />
+      <ProductsList productsList={productsList} />
 
       {children}
     </div>

@@ -1,33 +1,35 @@
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { IProduct } from '../../types';
 import { truncateText } from '../../utils';
 import { EntityRow, IRowCell } from '../EntityRow';
 import { IconButton } from '../IconButton';
 
 export interface IProductSummaryProps {
-  description: string;
-  imageUrl: string;
-  price: number;
-  title: string;
-  disabled?: boolean;
+  product: IProduct;
 }
 
-export const ProductSummary = ({ description, imageUrl, price, title, disabled = true }: IProductSummaryProps) => {
+export const ProductSummary = ({ product }: IProductSummaryProps) => {
+  const { description, disabled = true, imageURL, price, productTitle } = product;
+
+  const { t } = useTranslation();
+
   const mockRowCellsData: IRowCell[] = [
     {
-      imageUrl,
+      imageURL,
     },
     {
-      dataItemTitle: 'Price',
+      dataItemTitle: t('product.price'),
       dataItemValue: price.toString(),
       isPrice: true,
     },
     {
-      dataItemTitle: 'Name',
-      dataItemValue: title,
+      dataItemTitle: t('product.name'),
+      dataItemValue: productTitle,
     },
     {
-      dataItemTitle: 'Description',
+      dataItemTitle: t('product.description'),
       dataItemValue: truncateText(description, 13),
     },
     {

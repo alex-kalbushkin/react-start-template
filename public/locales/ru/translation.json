@@ -6,10 +6,18 @@
     "description": "Описание"
   },
   "category": {
-    "food": "Еда"
+    "shoes": "Обувь"
   },
-  "chocolate": {
-    "name": "Темный шоколад",
-    "description": "Лучший продукт"
+  "sneakers": {
+    "name": "Sneakers",
+    "description": "Высококачественная обувь"
+  },
+  "dockShoes": {
+    "name": "Dock shoes",
+    "description": "Износостойкие"
+  },
+  "nike": {
+    "name": "Nike",
+    "description": "Всемирно известные"
   }
 }
