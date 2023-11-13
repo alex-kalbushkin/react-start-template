@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { ModalWindow } from '../ModalWindow';
 import styles from './ModalControl.module.scss';
 
-export const ModalControl = () => {
+interface IModalControlProps {
+  elementContainer?: HTMLElement;
+}
+
+export const ModalControl = ({ elementContainer = document.body }: IModalControlProps) => {
   const [isModalVisible, setModalVisible] = useState(false);
   const [modalChildText, setModalChildText] = useState('');
 
@@ -29,9 +34,12 @@ export const ModalControl = () => {
         Open Modal
       </button>
 
-      <ModalWindow isModalVisible={isModalVisible} onHandleModalClose={handleModalClose}>
-        {modalChildText}
-      </ModalWindow>
+      {createPortal(
+        <ModalWindow isModalVisible={isModalVisible} onHandleModalClose={handleModalClose}>
+          {modalChildText}
+        </ModalWindow>,
+        elementContainer
+      )}
     </div>
   );
 };

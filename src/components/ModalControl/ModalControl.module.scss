@@ -1,36 +1,46 @@
+@import '../../providers/ThemeProvider/mixins.scss';
+
 .modalControlContainer {
   display: flex;
   flex-direction: column;
-  width: 300px;
-  max-width: 300px;
+  width: 100%;
+  max-width: 320px;
   padding: 10px;
-  background-color: #fff;
-  box-shadow: 0 0 1px 0 rgba(9, 30, 66, 0.3098039216), 0 3px 8px 0 rgba(9, 30, 66, 0.1607843137);
   border: none;
   border-radius: 4px;
-  margin-bottom: 10px;
+  margin: 5px 5px 10px;
+
+  @include themeCreator;
 
   .modalControlInput {
     border-radius: 4px;
     margin-bottom: 10px;
-    border: 1px solid rgba(30, 30, 30, 0.9);
     height: 30px;
     width: 100%;
+    padding: 2px;
+
+    // 4px in calc is paddings right / left
+    max-width: calc(100% - 4px);
+
+    @include theme('border', 'border-primary');
+    @include theme('color', 'color-primary');
+    @include theme('background-color', 'bg-secondary');
   }
 
   .modalControlButton {
     height: 30px;
     width: 90px;
-    cursor: pointer;
     border-radius: 4px;
-    border: 1px solid rgba(30, 30, 30, 0.9);
-    color: rgba(30, 30, 30, 0.9);
-    background-color: rgba(233, 233, 233, 0.5);
     transition: all ease-in-out 0.2s;
+    cursor: pointer;
+
+    @include theme('border', 'border-primary');
+    @include theme('color', 'color-primary');
+    @include theme('background-color', 'bg-secondary');
 
     &:hover {
-      color: rgba(10, 10, 10, 0.9);
-      background-color: rgba(186, 186, 186, 0.5);
+      @include theme('color', 'color-secondary');
+      @include theme('background-color', 'bg-primary');
     }
   }
 }

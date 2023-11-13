@@ -1,3 +1,4 @@
+@import '../../providers/ThemeProvider/mixins.scss';
 @import '../../styles/common.styles.scss';
 
 .modalWindowMask {
@@ -14,11 +15,11 @@
   background-color: rgba(0, 0, 0, 0.7);
 
   .modalWindow {
-    background-color: #ebebeb;
     width: $commonSize-1;
     height: $commonSize-1;
-    border: none;
     border-radius: 6px;
+
+    @include themeCreator;
 
     .modalHeader {
       height: 20px;
@@ -26,7 +27,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+      @include theme('box-shadow', 'box-shadow-primary');
 
       .headerIcon {
         display: inline-block;

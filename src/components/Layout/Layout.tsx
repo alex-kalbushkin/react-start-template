@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header } from '../Header';
+import { ModalControl } from '../ModalControl';
 import { ProductsList } from '../ProductsList';
 import { useLayoutService } from './services';
 import styles from './Layout.module.scss';
@@ -14,6 +15,7 @@ export const Layout = ({ children }: ILayoutProps) => {
   return (
     <div className={styles.layoutContainer}>
       <Header />
+      <ModalControl />
       <ProductsList productsList={productsList} />
 
       {children}
