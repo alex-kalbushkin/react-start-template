@@ -7,10 +7,14 @@ import { IProduct } from '../../../types';
 export function useProductListService(productsList: IProduct[]) {
   const { t } = useTranslation();
 
-  const [productListIntersected, setProductListIntersected] = useState(productsList);
+  const [productListIntersected, setProductListIntersected] = useState([...productsList]);
 
   const observerRef = useRef<IntersectionObserver | null>(null);
   const elementRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    setProductListIntersected([...productsList]);
+  }, [productsList]);
 
   useEffect(() => {
     const observerOptions: IntersectionObserverInit = {
