@@ -1,0 +1,55 @@
+@import '../../providers/ThemeProvider/mixins.scss';
+
+.form {
+  width: 300px;
+
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  @include themeCreator();
+
+  & div {
+    margin: 0;
+    padding: 0;
+  }
+
+  .formTitle {
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .field {
+    @include theme('color', 'color-primary');
+    @include theme('background-color', 'bg-primary');
+    margin-bottom: 5px;
+
+    &::placeholder {
+      @include theme('color', 'color-primary');
+    }
+  }
+
+  .errorMessage {
+    font-size: 12px;
+    margin: 0;
+    height: 20px;
+    @include theme('color', 'color-red');
+  }
+
+  .submit {
+    @include theme('color', 'color-primary');
+    @include theme('background-color', 'bg-primary');
+    margin: 15px 0 10px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      @include theme('background-color', 'color-blue');
+      @include theme('color', 'color-primary');
+    }
+  }
+}

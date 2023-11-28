@@ -1,4 +1,5 @@
 import React from 'react';
+import { ProfileForm } from '../Forms';
 import { Header } from '../Header';
 import { ModalControl } from '../ModalControl';
 import { ProductsList } from '../ProductsList';
@@ -16,6 +17,9 @@ export const Layout = ({ children }: ILayoutProps) => {
     <div className={styles.layoutContainer}>
       <Header />
       <ModalControl />
+
+      <ProfileForm />
+
       <ProductsList productsList={productsList} />
 
       {children}

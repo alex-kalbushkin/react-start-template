@@ -19,5 +19,21 @@
   "nike": {
     "name": "Nike",
     "description": "Всемирно известные"
+  },
+  "form": {
+    "submit": "Отправить",
+    "profileForm": {
+      "title": "Профиль",
+      "userName": {
+        "title": "Имя пользователя",
+        "placeholder": "Введите имя",
+        "errorRequired": "Имя обязательно"
+      },
+      "about": {
+        "title": "Общее инфо",
+        "placeholder": "Введите инфо",
+        "errorRequired": "Общее инфо обязательно"
+      }
+    }
   }
 }

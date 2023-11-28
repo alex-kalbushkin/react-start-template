@@ -19,5 +19,21 @@
   "nike": {
     "name": "Nike",
     "description": "World famous"
+  },
+  "form": {
+    "submit": "Submit",
+    "profileForm": {
+      "title": "Profile",
+      "userName": {
+        "title": "Username",
+        "placeholder": "Enter Username",
+        "errorRequired": "Username is required"
+      },
+      "about": {
+        "title": "About",
+        "placeholder": "Enter about info",
+        "errorRequired": "About is required"
+      }
+    }
   }
 }
