@@ -12,6 +12,6 @@ export default meta;
 
 type Story = StoryObj<typeof ProfileForm>;
 
-export const LayoutCommon: Story = {
+export const ProfileCommon: Story = {
   args: {},
 };

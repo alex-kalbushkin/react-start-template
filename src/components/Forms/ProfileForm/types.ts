@@ -6,9 +6,4 @@ export enum ProfileFormFieldNames {
   About = 'about',
 }
 
-export interface IProfileFormFields {
-  [ProfileFormFieldNames.UserName]: string;
-  [ProfileFormFieldNames.About]: string;
-}
-
 export type ProfileFormData = yup.InferType<typeof schema>;

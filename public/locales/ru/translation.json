@@ -34,6 +34,20 @@
         "placeholder": "Введите инфо",
         "errorRequired": "Общее инфо обязательно"
       }
+    },
+    "authForm": {
+      "title": "Авторизация",
+      "email": {
+        "title": "Почта",
+        "placeholder": "Введите почту",
+        "errorRequired": "Почта обязательна",
+        "errorValidEmail": "Невалидная почта"
+      },
+      "password": {
+        "title": "Пароль",
+        "placeholder": "Введите пароль",
+        "errorRequired": "Пароль обязателен"
+      }
     }
   }
 }

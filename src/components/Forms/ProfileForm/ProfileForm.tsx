@@ -22,6 +22,7 @@ export const ProfileForm = () => {
       userName: '',
       about: '',
     },
+    mode: 'onBlur',
     resolver: yupResolver(schema),
   });
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProfileForm } from '../Forms';
+import { AuthForm, ProfileForm } from '../Forms';
 import { Header } from '../Header';
 import { ModalControl } from '../ModalControl';
 import { ProductsList } from '../ProductsList';
@@ -19,6 +19,8 @@ export const Layout = ({ children }: ILayoutProps) => {
       <ModalControl />
 
       <ProfileForm />
+
+      <AuthForm />
 
       <ProductsList productsList={productsList} />
 

@@ -34,6 +34,20 @@
         "placeholder": "Enter about info",
         "errorRequired": "About is required"
       }
+    },
+    "authForm": {
+      "title": "Authentication",
+      "email": {
+        "title": "Email",
+        "placeholder": "Enter email",
+        "errorRequired": "Email is required",
+        "errorValidEmail": "Is not valid email"
+      },
+      "password": {
+        "title": "Password",
+        "placeholder": "Enter password",
+        "errorRequired": "Password is required"
+      }
     }
   }
 }
