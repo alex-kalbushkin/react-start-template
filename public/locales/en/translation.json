@@ -48,6 +48,32 @@
         "placeholder": "Enter password",
         "errorRequired": "Password is required"
       }
+    },
+    "productForm": {
+      "title": "Add Product",
+      "price": {
+        "title": "Price",
+        "placeholder": "Enter price",
+        "errorRequired": "Price is required",
+        "errorMin": "Enter numbers from 1",
+        "errorNumber": "Enter numbers only"
+      },
+      "categoryName": {
+        "title": "Category",
+        "placeholder": "Enter category",
+        "errorRequired": "Category is required",
+        "errorMin": "Enter at least 5 characters"
+      },
+      "name": {
+        "title": "Product name",
+        "placeholder": "Enter product name",
+        "errorRequired": "Product name is required",
+        "errorMin": "Enter at least 3 characters"
+      },
+      "description": {
+        "title": "Description",
+        "placeholder": "Enter description"
+      }
     }
   }
 }

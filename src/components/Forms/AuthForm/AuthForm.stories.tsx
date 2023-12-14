@@ -12,6 +12,6 @@ export default meta;
 
 type Story = StoryObj<typeof AuthForm>;
 
-export const LayoutCommon: Story = {
+export const AuthFormCommon: Story = {
   args: {},
 };

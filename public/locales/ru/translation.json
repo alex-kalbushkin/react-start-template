@@ -48,6 +48,32 @@
         "placeholder": "Введите пароль",
         "errorRequired": "Пароль обязателен"
       }
+    },
+    "productForm": {
+      "title": "Добавить продукт",
+      "price": {
+        "title": "Цена",
+        "placeholder": "Введите цену",
+        "errorRequired": "Цена обязательна",
+        "errorMin": "Введите цифры от 1",
+        "errorNumber": "Введите только цифры"
+      },
+      "categoryName": {
+        "title": "Категория",
+        "placeholder": "Введите категорию",
+        "errorRequired": "Категория обязательна",
+        "errorMin": "Введите минимум 5 символов"
+      },
+      "name": {
+        "title": "Название продукта",
+        "placeholder": "Введите название продукта",
+        "errorRequired": "Название продукта обязательно",
+        "errorMin": "Введите минимум 3 символа"
+      },
+      "description": {
+        "title": "Описание",
+        "placeholder": "Введите описание"
+      }
     }
   }
 }
