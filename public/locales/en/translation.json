@@ -75,5 +75,11 @@
         "placeholder": "Enter description"
       }
     }
+  },
+  "navigation": {
+    "notFound": "Not found",
+    "profile": "Profile",
+    "productAdd": "Add product",
+    "products": "Products"
   }
 }

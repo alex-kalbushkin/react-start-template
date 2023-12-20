@@ -1,9 +1,5 @@
 import React from 'react';
-import { AuthForm, ProductForm, ProfileForm } from '../Forms';
 import { Header } from '../Header';
-import { ModalControl } from '../ModalControl';
-import { ProductsList } from '../ProductsList';
-import { useLayoutService } from './services';
 import styles from './Layout.module.scss';
 
 interface ILayoutProps {
@@ -11,22 +7,11 @@ interface ILayoutProps {
 }
 
 export const Layout = ({ children }: ILayoutProps) => {
-  const { productsList } = useLayoutService();
-
   return (
     <div className={styles.layoutContainer}>
       <Header />
-      <ModalControl />
 
-      <ProfileForm />
-
-      <AuthForm />
-
-      <ProductForm />
-
-      <ProductsList productsList={productsList} />
-
-      {children}
+      <main className={styles.mainContainer}>{children}</main>
     </div>
   );
 };

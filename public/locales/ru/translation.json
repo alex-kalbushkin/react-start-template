@@ -75,5 +75,11 @@
         "placeholder": "Введите описание"
       }
     }
+  },
+  "navigation": {
+    "notFound": "Не найдено",
+    "profile": "Профиль",
+    "productAdd": "Добавить продукт",
+    "products": "Продукты"
   }
 }

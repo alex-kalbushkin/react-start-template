@@ -4,10 +4,10 @@ import { ProductFull } from '../ProductFull';
 import { useProductListService } from './services';
 
 interface IProductsListProps {
-  productsList: IProduct[];
+  productsList?: IProduct[];
 }
 
-export const ProductsList = ({ productsList }: IProductsListProps) => {
+export const ProductsList = ({ productsList = [] }: IProductsListProps) => {
   const { elementRef, productListIntersected } = useProductListService(productsList);
 
   return (

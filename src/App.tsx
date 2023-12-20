@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { Layout } from './components/Layout';
+import { Navigation } from './components/Navigation';
 import './App.css';
 import { LocalizationCreator } from './localization';
 import './localization/settings';
@@ -11,7 +11,7 @@ function App() {
       <Suspense fallback="Loading...">
         <LocalizationCreator />
         <ThemeProvider>
-          <Layout />
+          <Navigation />
         </ThemeProvider>
       </Suspense>
     </div>
