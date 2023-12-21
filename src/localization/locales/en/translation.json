@@ -1,0 +1,85 @@
+{
+  "product": {
+    "price": "Price",
+    "categoryName": "Category name",
+    "name": "Name",
+    "description": "Description"
+  },
+  "category": {
+    "shoes": "Shoes"
+  },
+  "sneakers": {
+    "name": "Sneakers",
+    "description": "High quality shoes"
+  },
+  "dockShoes": {
+    "name": "Dock shoes",
+    "description": "Strong shoes"
+  },
+  "nike": {
+    "name": "Nike",
+    "description": "World famous"
+  },
+  "form": {
+    "submit": "Submit",
+    "profileForm": {
+      "title": "Profile",
+      "userName": {
+        "title": "Username",
+        "placeholder": "Enter Username",
+        "errorRequired": "Username is required"
+      },
+      "about": {
+        "title": "About",
+        "placeholder": "Enter about info",
+        "errorRequired": "About is required"
+      }
+    },
+    "authForm": {
+      "title": "Authentication",
+      "email": {
+        "title": "Email",
+        "placeholder": "Enter email",
+        "errorRequired": "Email is required",
+        "errorValidEmail": "Is not valid email"
+      },
+      "password": {
+        "title": "Password",
+        "placeholder": "Enter password",
+        "errorRequired": "Password is required"
+      }
+    },
+    "productForm": {
+      "title": "Add Product",
+      "price": {
+        "title": "Price",
+        "placeholder": "Enter price",
+        "errorRequired": "Price is required",
+        "errorMin": "Enter numbers from 1",
+        "errorNumber": "Enter numbers only"
+      },
+      "categoryName": {
+        "title": "Category",
+        "placeholder": "Enter category",
+        "errorRequired": "Category is required",
+        "errorMin": "Enter at least 5 characters"
+      },
+      "name": {
+        "title": "Product name",
+        "placeholder": "Enter product name",
+        "errorRequired": "Product name is required",
+        "errorMin": "Enter at least 3 characters"
+      },
+      "description": {
+        "title": "Description",
+        "placeholder": "Enter description"
+      }
+    }
+  },
+  "navigation": {
+    "notFound": "Not found",
+    "profile": "Profile",
+    "productAdd": "Add product",
+    "products": "Products"
+  }
+}

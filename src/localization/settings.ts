@@ -3,6 +3,17 @@ import { initReactI18next } from 'react-i18next';
 import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { LocaleLanguage } from './types';
+import translationEN from './locales/en/translation.json';
+import translationRU from './locales/ru/translation.json';
+
+const resources = {
+  en: {
+    translation: translationEN,
+  },
+  nl: {
+    translation: translationRU,
+  },
+};
 
 /* eslint-disable */
 i18n
@@ -17,10 +28,11 @@ i18n
     interpolation: {
       escapeValue: false,
     },
-    backend: {
-      // additional config for gh-pages
-      loadPath: '/locales/{{lng}}/{{ns}}.json',
-    },
+    resources,
+    // backend: {
+    //   // additional config for gh-pages
+    //   loadPath: '/react-start-template/locales/{{lng}}/{{ns}}.json',
+    // },
   });
 /* eslint-enable */
 
