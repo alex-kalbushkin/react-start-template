@@ -3,15 +3,17 @@ import { Navigation } from './components/Navigation';
 import './App.css';
 import { LocalizationCreator } from './localization';
 import './localization/settings';
-import { ThemeProvider } from './providers';
+import { ThemeProvider, TokenProvider } from './providers';
 
 function App() {
   return (
     <div className="App">
       <Suspense fallback="Loading...">
-        <LocalizationCreator />
         <ThemeProvider>
-          <Navigation />
+          <LocalizationCreator />
+          <TokenProvider>
+            <Navigation />
+          </TokenProvider>
         </ThemeProvider>
       </Suspense>
     </div>

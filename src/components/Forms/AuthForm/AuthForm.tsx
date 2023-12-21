@@ -2,12 +2,14 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { Button, Form, Input } from 'antd';
 import React from 'react';
 import { Controller, useForm } from 'react-hook-form';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Title } from '../../../components/Title';
+import { useTokenContext } from '../../../providers/TokenProvider';
 import { FormItem } from '../FormItem';
+import styles from '../Form.module.scss';
 import { AuthFormData, AuthFormFieldNames } from './types';
 import { schema } from './validation';
-import styles from '../Form.module.scss';
 
 export const AuthForm = () => {
   const { t } = useTranslation();
@@ -26,9 +28,18 @@ export const AuthForm = () => {
     resolver: yupResolver(schema),
   });
 
+  const location = useLocation();
+  const navigate = useNavigate();
+  const {
+    tokenActions: { login },
+  } = useTokenContext();
+
   const onHandleSubmit = (data: AuthFormData) => {
     console.log(data);
     reset();
+
+    login();
+    navigate((location.state.from as Location) || '/');
   };
 
   return (

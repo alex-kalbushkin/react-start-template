@@ -1,0 +1,9 @@
+@import '../../providers/ThemeProvider/mixins.scss';
+
+.navContainer {
+  width: calc(100% - 20px);
+  min-height: calc(100vh - 20px);
+  padding: 10px;
+
+  @include theme('background-color', 'bg-layout');
+}

@@ -2,8 +2,11 @@
 
 .layoutContainer {
   width: 100%;
-  background-color: #f3f4f6;
   position: relative;
 
   @include theme('background-color', 'bg-layout');
+
+  .mainContainer {
+    min-height: calc(100vh - 70px);
+  }
 }

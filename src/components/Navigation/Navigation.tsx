@@ -5,6 +5,8 @@ import { Layout } from '../Layout';
 import { useLayoutService } from '../Layout/services';
 import { NotFound } from '../NotFound';
 import { ProductsList } from '../ProductsList';
+import { ProtectedRoute } from './ProtectedRoute';
+import styles from './Navigation.module.scss';
 
 interface INavigationProps {
   children?: React.ReactNode;
@@ -14,24 +16,28 @@ const NavigationCommon = () => {
   const { productsList } = useLayoutService();
 
   return (
-    <Layout>
-      <Routes>
-        <Route index element={<Navigate to="/profile" replace />} />
-        <Route path="/profile" element={<ProfileForm />} />
-        <Route path="/products" element={<ProductsList productsList={productsList} />} />
-        <Route path="/product-add" element={<ProductForm />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Layout>
+    <ProtectedRoute>
+      <Layout>
+        <Routes>
+          <Route index element={<Navigate to="/profile" replace />} />
+          <Route path="/profile" element={<ProfileForm />} />
+          <Route path="/products" element={<ProductsList productsList={productsList} />} />
+          <Route path="/product-add" element={<ProductForm />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Layout>
+    </ProtectedRoute>
   );
 };
 
 export const Navigation = ({ children }: INavigationProps) => (
-  <BrowserRouter>
-    {children}
-    <Routes>
-      <Route path="/auth" element={<AuthForm />} />
-      <Route path="*" element={<NavigationCommon />} />
-    </Routes>
-  </BrowserRouter>
+  <div className={styles.navContainer}>
+    <BrowserRouter>
+      {children}
+      <Routes>
+        <Route path="/auth" element={<AuthForm />} />
+        <Route path="*" element={<NavigationCommon />} />
+      </Routes>
+    </BrowserRouter>
+  </div>
 );
