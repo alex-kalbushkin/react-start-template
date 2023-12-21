@@ -32,7 +32,7 @@ const NavigationCommon = () => {
 
 export const Navigation = ({ children }: INavigationProps) => (
   <div className={styles.navContainer}>
-    <BrowserRouter>
+    <BrowserRouter basename="/react-start-template">
       {children}
       <Routes>
         <Route path="/auth" element={<AuthForm />} />
