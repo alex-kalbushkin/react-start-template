@@ -39,7 +39,7 @@ export const AuthForm = () => {
     reset();
 
     login();
-    navigate((location.state.from as Location) || '/');
+    navigate((location.state?.from as Location) || '/');
   };
 
   return (
