@@ -65,7 +65,13 @@ export const AuthForm = () => {
         name={AuthFormFieldNames.Password}
         render={({ field }) => (
           <FormItem title={t('form.authForm.password.title')} required>
-            <Input {...field} className={styles.field} placeholder={t('form.authForm.password.placeholder')} />
+            <Input
+              {...field}
+              className={styles.field}
+              placeholder={t('form.authForm.password.placeholder')}
+              type="password"
+              autoComplete="off"
+            />
             <p className={styles.errorMessage}>
               {errors.password?.message.includes('required') && t('form.authForm.password.errorRequired')}
             </p>

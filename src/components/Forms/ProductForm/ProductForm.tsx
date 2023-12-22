@@ -42,7 +42,12 @@ export const ProductForm = () => {
         name={ProductFormFieldNames.Price}
         render={({ field }) => (
           <FormItem title={t('form.productForm.price.title')} required>
-            <Input {...field} className={styles.field} placeholder={t('form.productForm.price.placeholder')} />
+            <Input
+              {...field}
+              className={styles.field}
+              placeholder={t('form.productForm.price.placeholder')}
+              type="number"
+            />
             <p className={styles.errorMessage}>
               {errors.price?.message.includes('required') && t('form.productForm.price.errorRequired')}
               {errors.price?.message.includes('1') && t('form.productForm.price.errorMin')}
