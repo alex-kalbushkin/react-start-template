@@ -10,7 +10,7 @@ const resources = {
   en: {
     translation: translationEN,
   },
-  nl: {
+  ru: {
     translation: translationRU,
   },
 };
@@ -29,10 +29,6 @@ i18n
       escapeValue: false,
     },
     resources,
-    // backend: {
-    //   // additional config for gh-pages
-    //   loadPath: '/react-start-template/locales/{{lng}}/{{ns}}.json',
-    // },
   });
 /* eslint-enable */
 

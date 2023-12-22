@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { AuthForm, ProductForm, ProfileForm } from '../Forms';
 import { Layout } from '../Layout';
 import { useLayoutService } from '../Layout/services';
@@ -32,12 +32,10 @@ const NavigationCommon = () => {
 
 export const Navigation = ({ children }: INavigationProps) => (
   <div className={styles.navContainer}>
-    <BrowserRouter basename="/react-start-template">
-      {children}
-      <Routes>
-        <Route path="/auth" element={<AuthForm />} />
-        <Route path="*" element={<NavigationCommon />} />
-      </Routes>
-    </BrowserRouter>
+    {children}
+    <Routes>
+      <Route path="/auth" element={<AuthForm />} />
+      <Route path="*" element={<NavigationCommon />} />
+    </Routes>
   </div>
 );
