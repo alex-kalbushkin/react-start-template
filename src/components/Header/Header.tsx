@@ -32,6 +32,9 @@ export const Header = () => {
           <NavLink to="/products" className={getLinkClassName}>
             {t('navigation.products')}
           </NavLink>
+          <NavLink to="/cart" className={getLinkClassName}>
+            {t('navigation.cart')}
+          </NavLink>
         </div>
 
         <div className={styles.switchers}>

@@ -80,7 +80,8 @@
     "notFound": "Not found",
     "profile": "Profile",
     "productAdd": "Add product",
-    "products": "Products"
+    "products": "Products",
+    "cart": "Cart"
   },
   "modal": {
     "openModal": "Open modal"

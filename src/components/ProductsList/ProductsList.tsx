@@ -3,7 +3,7 @@ import { IProduct } from '../../types';
 import { ProductFull } from '../ProductFull';
 import { useProductListService } from './services';
 
-interface IProductsListProps {
+export interface IProductsListProps {
   productsList?: IProduct[];
 }
 

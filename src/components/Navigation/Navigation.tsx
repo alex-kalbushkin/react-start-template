@@ -5,6 +5,7 @@ import { Layout } from '../Layout';
 import { useLayoutService } from '../Layout/services';
 import { AddProductWithModal } from '../Modals';
 import { NotFound } from '../NotFound';
+import { ProductSummaryList } from '../Products';
 import { ProductsList } from '../ProductsList';
 import { ProtectedRoute } from './ProtectedRoute';
 import styles from './Navigation.module.scss';
@@ -15,6 +16,7 @@ interface INavigationProps {
 
 const NavigationCommon = () => {
   const { productsList } = useLayoutService();
+  const cartProducts = productsList.filter((p, index) => index <= 3);
 
   return (
     <ProtectedRoute>
@@ -24,6 +26,7 @@ const NavigationCommon = () => {
           <Route path="/profile" element={<ProfileForm />} />
           <Route path="/products" element={<ProductsList productsList={productsList} />} />
           <Route path="/product-add" element={<AddProductWithModal />} />
+          <Route path="/cart" element={<ProductSummaryList productsList={cartProducts} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>

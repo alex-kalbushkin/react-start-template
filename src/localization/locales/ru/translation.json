@@ -80,7 +80,8 @@
     "notFound": "Не найдено",
     "profile": "Профиль",
     "productAdd": "Добавить продукт",
-    "products": "Продукты"
+    "products": "Продукты",
+    "cart": "Корзина"
   },
   "modal": {
     "openModal": "Открыть диалог"
