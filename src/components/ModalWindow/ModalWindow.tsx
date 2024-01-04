@@ -1,16 +1,24 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import styles from './ModalWindow.module.scss';
 
 export interface IModalWindowProps {
+  children: ReactNode;
   isModalVisible: boolean;
   headerText?: string;
-  children: ReactNode;
+  withContentCentered?: boolean;
   onHandleModalClose: () => void;
 }
 
-export const ModalWindow = ({ isModalVisible, children, headerText = '', onHandleModalClose }: IModalWindowProps) => {
+export const ModalWindow = ({
+  isModalVisible,
+  children,
+  headerText = '',
+  withContentCentered = false,
+  onHandleModalClose,
+}: IModalWindowProps) => {
   if (!isModalVisible) {
     return null;
   }
@@ -23,7 +31,9 @@ export const ModalWindow = ({ isModalVisible, children, headerText = '', onHandl
           <FontAwesomeIcon className={styles.headerIcon} icon={faXmark} onClick={onHandleModalClose} />
         </div>
 
-        <div className={styles.modalContent}>{children}</div>
+        <div className={clsx(styles.modalContent, { [styles.modalContentCentered]: withContentCentered })}>
+          {children}
+        </div>
       </div>
     </div>
   );

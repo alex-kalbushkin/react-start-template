@@ -81,5 +81,8 @@
     "profile": "Profile",
     "productAdd": "Add product",
     "products": "Products"
+  },
+  "modal": {
+    "openModal": "Open modal"
   }
 }

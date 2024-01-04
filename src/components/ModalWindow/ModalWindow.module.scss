@@ -16,7 +16,7 @@
 
   .modalWindow {
     width: $commonSize-1;
-    height: $commonSize-1;
+    max-height: 600px;
     border-radius: 6px;
 
     @include themeCreator;
@@ -42,6 +42,12 @@
 
     .modalContent {
       padding: 6px 10px;
+
+      &.modalContentCentered {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
   }
 }

@@ -9,7 +9,11 @@ import { ProductFormData, ProductFormFieldNames } from './types';
 import { schema } from './validation';
 import styles from '../Form.module.scss';
 
-export const ProductForm = () => {
+interface IProductFormProps {
+  additionalSubmitHandler?: () => void | Promise<void>;
+}
+
+export const ProductForm = ({ additionalSubmitHandler }: IProductFormProps) => {
   const { t } = useTranslation();
 
   const {
@@ -31,6 +35,10 @@ export const ProductForm = () => {
   const onHandleSubmit = (data: ProductFormData) => {
     console.log(data);
     reset();
+
+    if (additionalSubmitHandler) {
+      additionalSubmitHandler();
+    }
   };
 
   return (
@@ -65,7 +73,7 @@ export const ProductForm = () => {
             <Input {...field} className={styles.field} placeholder={t('form.productForm.categoryName.placeholder')} />
             <p className={styles.errorMessage}>
               {errors.categoryName?.message.includes('required') && t('form.productForm.categoryName.errorRequired')}
-              {errors.price?.message.includes('5') && t('form.productForm.categoryName.errorMin')}
+              {errors.categoryName?.message.includes('5') && t('form.productForm.categoryName.errorMin')}
             </p>
           </FormItem>
         )}

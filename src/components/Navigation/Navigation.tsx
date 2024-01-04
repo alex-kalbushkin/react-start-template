@@ -1,8 +1,9 @@
 import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { AuthForm, ProductForm, ProfileForm } from '../Forms';
+import { AuthForm, ProfileForm } from '../Forms';
 import { Layout } from '../Layout';
 import { useLayoutService } from '../Layout/services';
+import { AddProductWithModal } from '../Modals';
 import { NotFound } from '../NotFound';
 import { ProductsList } from '../ProductsList';
 import { ProtectedRoute } from './ProtectedRoute';
@@ -22,7 +23,7 @@ const NavigationCommon = () => {
           <Route index element={<Navigate to="/profile" replace />} />
           <Route path="/profile" element={<ProfileForm />} />
           <Route path="/products" element={<ProductsList productsList={productsList} />} />
-          <Route path="/product-add" element={<ProductForm />} />
+          <Route path="/product-add" element={<AddProductWithModal />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
